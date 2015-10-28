@@ -171,7 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    lpa.decode=true
+    lpa.decode=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
