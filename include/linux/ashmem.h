@@ -15,6 +15,8 @@
 #include <linux/limits.h>
 #include <linux/ioctl.h>
 
+struct file;
+
 #define ASHMEM_NAME_LEN		256
 
 #define ASHMEM_NAME_DEF		"dev/ashmem"
