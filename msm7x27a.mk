@@ -25,7 +25,11 @@ PRODUCT_PACKAGES += \
     copybit.msm7x27a \
     gralloc.msm7x27a \
     hwcomposer.msm7x27a \
-    libtilerenderer
+    memtrack.msm7x27a \
+    libgenlock \
+    liboverlay \
+    libtilerenderer \
+    libqdMetaData
 
 ## Misc.
 PRODUCT_PACKAGES += \
