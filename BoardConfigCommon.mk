@@ -67,7 +67,7 @@ COMMON_GLOBAL_CFLAGS += -DNO_TUNNELED_SOURCE
 #QCOM_DIRECTTRACK := false
 
 # OpenGL drivers config file path 
-BOARD_EGL_CFG := device/htc/msm7x27a-common/prebuilt/lib/egl/egl.cfg 
+BOARD_EGL_CFG := device/samsung/msm7x27a-common/prebuilt/lib/egl/egl.cfg  
  
 # Graphics 
 BOARD_USES_QCOM_HARDWARE := true 
