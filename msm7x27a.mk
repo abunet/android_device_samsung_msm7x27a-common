@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/msm7x27a-common/overlay
+# Inherit from those products. Most specific first
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## Video
-PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libmm-omxcore \
-    libOmxCore
+# Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
+
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/samsung/msm7x27a-common/overlay
 
 ## Graphics
 PRODUCT_PACKAGES += \
@@ -30,6 +32,16 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtilerenderer \
     libqdMetaData
+
+## Video
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libmm-omxcore \
+    libOmxCore
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm7x27a
 
 ## Misc.
 PRODUCT_PACKAGES += \
@@ -209,12 +221,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=60
-
-$(call inherit-product, build/target/product/full.mk)
-$(call inherit-product, vendor/samsung/msm7x27a-common/blobs.mk)
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
-
+    
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
