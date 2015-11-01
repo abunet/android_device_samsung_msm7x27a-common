@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
 
 ## Other HALs
 PRODUCT_PACKAGES += \
+    dexpreopt \
     camera.msm7x27a \
     lights.msm7x27a \
     gps.msm7x27a \
@@ -143,6 +144,12 @@ PRODUCT_COPY_FILES += \
 ## Touchscreen configuration
 PRODUCT_COPY_FILES += \
     device/samsung/msm7x27a-common/prebuilt/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
+    
+# Use ART small mode
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=balanced \
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.image-dex2oat-filter=speed
 
 ## Properties
 PRODUCT_PROPERTY_OVERRIDES += \
