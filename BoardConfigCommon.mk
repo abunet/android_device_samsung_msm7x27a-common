@@ -32,7 +32,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm7x27a-common/include
 
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -71,8 +70,7 @@ BOARD_EGL_CFG := device/samsung/msm7x27a-common/prebuilt/lib/egl/egl.cfg
 
 ## Qualcomm BSP
 TARGET_USES_QCOM_BSP := true
-TARGET_RECOVERY_NO_MSM_BSP := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP -DUSE_MDP3 -DNO_IOMMU 
 
 ## Camera
 TARGET_DISABLE_ARM_PIE := true
