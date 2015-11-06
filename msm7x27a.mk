@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libmm-omxcore \
     libOmxCore \
-    libdashplayer 
+    libdashplayer
 
 ## Graphics
 PRODUCT_PACKAGES += \
@@ -27,8 +27,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm7x27a \
     hwcomposer.msm7x27a \
     memtrack.msm7x27a \
-    libqdMetaData \ 
-    libgenlock 
+    libqdMetaData \
+    libgenlock
 
 ## Misc.
 PRODUCT_PACKAGES += \
@@ -160,9 +160,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=dyn \
-    debug.gralloc.map_fb_memory=true \ 
-    persist.hwc.mdpcomp.enable=false \ 
-    debug.mdpcomp.logs=0 \ 
+    debug.gralloc.map_fb_memory=true \
+    persist.hwc.mdpcomp.enable=false \
+    debug.mdpcomp.logs=0 \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=160
 
@@ -172,7 +172,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    lpa.decode=false \ 
+    lpa.decode=false \
     com.qc.hardware=true \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
